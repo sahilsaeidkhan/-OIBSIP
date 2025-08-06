@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- box icons -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Calculate Temperature</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<button id="dark-mode-toggle">🌙</button>
+
+<h1 id="thank-you-heading" style="display: none;">Welcome to the <span class="highlight-dark"> Dark</span> Side 😎</h1>
+<div class="converter-box">
+        <div class="temperature-converter">
+            <h1 class="title">Temperature Converter</h1>
+            <div class="result">
+                <span class="result-heading">Result (Celsius)</span>
+                <h2 class="celsius-value" id="celsius">0°C</h2>
+            </div>
+            <!-- input field -->
+            <div class="degree-type">
+                <!-- for degrees -->
+                <div class="degree-field">
+                    <label for="degree">Degrees</label>
+                    <input type="number" name="" id="degree" placeholder="Enter value" />
+                </div>
+                <!-- for option selection -->
+                <div class="temp-field">
+                    <label for="temp-type">Type</label>
+                    <select name="" id="temp-type" autocomplete="on">
+                        <option id="fahrenheit" value="fahrenheit">Fahrenheit</option>
+                        <option id="kelvin" value="kelvin">Kelvin</option>
+                    </select>
+                </div>
+            </div>
+            <button id="convert-btn">Convert</button>
+        </div>
+    </div>
+    
+     <script>
+        const celsiusField = document.querySelector("#celsius");
+        const degree = document.querySelector("#degree");
+        const convertBtn = document.querySelector("#convert-btn");
+        const tempType = document.querySelector("#temp-type");
+        
+        window.addEventListener("load", () => {
+            degree.value = "";
+            celsiusField.innerHTML = "";
+        }); 
+        convertBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            convertToCelsius();
+            convertBtn.innerHTML = "<span class='icon'><i class='fa fa-spinner fa-spin'></i> Converting...</span>";
+            setTimeout(() => {
+                convertBtn.innerHTML = "<span>Convert</span>";
+            }, 1000);
+        });
+        
+        function convertToCelsius() {
+            let inputValue = degree.value;
+            
+            // Add input validation
+            if (inputValue === "" || isNaN(inputValue)) {
+                celsiusField.innerHTML = "Please enter a valid number";
+                return;
+            }
+            
+            setTimeout(() => {
+                if (tempType.value === "fahrenheit") {
+                    const FahrenheitToCelsius = (inputValue - 32) * (5 / 9);
+                    celsiusField.innerHTML = `${FahrenheitToCelsius.toFixed(3)} &deg;C`;
+                } else if (tempType.value === "kelvin") {
+                    const KelvinToCelsius = inputValue - 273.15;
+                    celsiusField.innerHTML = `${KelvinToCelsius.toFixed(3)} &deg;C`;
+                }
+            }, 1200);
+        }
+        
+        const toggleBtn = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+        const heading = document.getElementById('thank-you-heading');
+        
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                heading.style.display = 'block';
+            } else {
+                heading.style.display = 'none';
+            }
+        });
+    </script>
+   
+</body>
+</html>

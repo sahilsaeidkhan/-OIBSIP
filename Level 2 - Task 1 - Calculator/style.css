@@ -1,0 +1,173 @@
+ * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-sizing: border-box;
+        }
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background: linear-gradient(135deg, #a5dae9, #7fb3d3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .calculator {
+            background: #324154;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+            transition: transform 0.7s ease;
+            z-index: 2;
+        }
+
+        .calculator form input {
+            border: 0;
+            outline: 0;
+            padding: 18px;
+            font-size: 28px;
+            height: 80px;
+            width: 80px;
+            cursor: pointer;
+            background: transparent;
+            color: #fff;
+            border-radius: 15px;
+            box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+            margin: 3px;
+            transition: all 0.2s ease;
+        }
+
+        .calculator form input:hover {
+            transform: scale(1.05);
+            box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.15), 7px 7px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        .calculator form input:active {
+            transform: scale(0.95);
+        }
+
+        form .display {
+            justify-content: flex-end;
+            display: flex;
+            margin: 20px 0;
+        }
+
+        form .display input {
+            text-align: right;
+            flex: 1;
+            font-size: 50px;
+            box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2);
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        form input.equal {
+            width: 166px;
+            background: linear-gradient(45deg, #286e61, #26cc9f);
+            color: #324154;
+            font-weight: bold;
+        }
+
+        form input.equal:hover {
+            background: linear-gradient(45deg, #26cc9f, #2e776a);
+        }
+
+        form input.operator {
+            color: #33ffd8;
+            font-weight: bold;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 5px;
+            margin: 5px 0;
+        }
+
+        .error {
+            color: #ff6b6b;
+            font-size: 20px;
+        }
+
+        .text-section {
+            position: absolute;
+            left: -400px;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.8s ease;
+            z-index: 1;
+        }
+
+        .text-section.show {
+            left: 80px;
+            opacity: 1;
+        }
+
+        .text-section h1 {
+            font-size: 6rem;
+            font-weight: bold;
+            color: #324154;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .text-section p {
+            font-size: 1.7rem;
+            color: #2c3e50;
+            font-weight: 500;
+            line-height: 1.5;
+            max-width: 400px;
+            margin-left: 38px;
+        }
+
+        .highlight {
+            color: #26cc9f;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .calculator {
+                padding: 15px;
+            }
+            
+            .calculator form input {
+                height: 60px;
+                width: 60px;
+                font-size: 20px;
+            }
+            
+            form .display input {
+                font-size: 35px;
+            }
+
+            .text-section h1 {
+                font-size: 2.5rem;
+            }
+
+            .text-section p {
+                font-size: 1.2rem;
+            }
+
+            .text-section.show {
+                left: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .text-section h1 {
+                font-size: 2.5rem;
+                font-weight: 900;
+            }
+
+            .text-section p {
+                font-size: 1.3rem;
+                font-weight: 700;
+            }
+        }

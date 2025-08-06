@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>CineMovies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <a href="#" class="logo">CineFlow</a>
+    <ul class="nav">
+    <li><a href="#"><i class="fa-solid fa-house"></i></a></li>
+    <li><a href="#">Adults</a></li>
+    <li><a href="#">Kids</a></li>
+    <li><a href="#">Trends</a></li>
+    <li><a href="#">My list</a></li>
+</ul>
+
+   <div class="search">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="text" placeholder="Search">
+</div>
+
+</header>
+
+<div class="banner">
+    <!-- Titanic Content -->
+    <div class="content active titanic">
+        <img src="assests/movies name/Adobe Express - file.png" alt="" class="movie-title"/>
+        <h4>
+            <span>1997</span>
+            <span><i>18+</i></span>
+            <span>3h 14m</span>
+            <span>Romance/Adventure</span>
+        </h4>
+        <p>Titanic is a 1997 American epic romantic disaster film written and directed by James Cameron. Incorporating both historical and fictionalized aspects, it is based on accounts of the sinking of RMS Titanic in 1912. The film stars Leonardo DiCaprio and Kate Winslet as members of different social classes who fall in love during the ship's maiden voyage.</p>
+        <div class="button">
+            <a href="https://www.hotstar.com/in/movies/titanic/1770001166?search_query=titanic" target="_blank"><i class="fa-solid fa-play"></i>Watch</a>
+            <a href="#"><i class="fa-solid fa-plus"></i>My List</a>
+        </div>
+    </div>
+
+    <!-- DDLJ Content -->
+    <div class="content ddlj">
+        <img src="ddljtitle.png" alt="" class="movie-title"/>
+        <h4>
+            <span>1995</span>
+            <span><i>U</i></span>
+            <span>3h 1m</span>
+            <span>Romance/Drama</span>
+        </h4>
+        <p>Dilwale Dulhania Le Jayenge is a 1995 Indian Hindi-language musical romance film written and directed by Aditya Chopra. The film tells the story of Raj and Simran, two young non-resident Indians, who fall in love during a vacation through Europe with their friends.</p>
+        <div class="button">
+            <a href="https://www.primevideo.com/detail/Dilwale-Dulhania-Le-Jayenge/0FWM6LXBGLJP0XQDQYPI9H4PMH"><i class="fa-solid fa-play"></i>Watch</a>
+            <a href="#"><i class="fa-solid fa-plus"></i>My List</a>
+        </div>
+    </div>
+
+    <!-- Peaky Blinders Content -->
+    <div class="content peaky">
+        <img src="peakytitle.png" alt="" class="movie-title"/>
+        <h4>
+            <span>2013</span>
+            <span><i>18+</i></span>
+            <span>6 Seasons</span>
+            <span>Crime/Drama</span>
+        </h4>
+        <p>Peaky Blinders is a British period crime drama television series created by Steven Knight. Set in Birmingham, England, it follows the exploits of the Peaky Blinders crime gang in the direct aftermath of the First World War.</p>
+        <div class="button">
+            <a href="https://www.netflix.com/in/title/80002479"><i class="fa-solid fa-play"></i>Watch</a>
+            <a href="#"><i class="fa-solid fa-plus"></i>My List</a>
+        </div>
+    </div>
+
+    <!-- Squid Game Content -->
+    <div class="content squid">
+        <img src="squidgametitle.png" alt="" class="movie-title"/>
+        <h4>
+            <span>2021</span>
+            <span><i>18+</i></span>
+            <span>3 Season</span>
+            <span>Thriller/Drama</span>
+        </h4>
+        <p>Squid Game is a South Korean survival drama television series created by Hwang Dong-hyuk. The series revolves around a contest where 456 players, all of whom are in deep financial hardship, risk their lives to play a series of deadly children's games.</p>
+        <div class="button">
+            <a href="https://www.netflix.com/in/title/81040344"><i class="fa-solid fa-play"></i>Watch</a>
+            <a href="#"><i class="fa-solid fa-plus"></i>My List</a>
+        </div>
+    </div>
+
+    <div class="carousel-box">  
+        <div class="carousel">
+            <div class="carousel-item" onclick="changeBg('titanicbg.jpg', 'titanic');">
+                <img src="titaniccard.png" alt="">
+            </div>
+            <div class="carousel-item" onclick="changeBg('ddljbg.png', 'ddlj');">
+                <img src="ddljcard.png" alt="">
+            </div>
+            <div class="carousel-item" onclick="changeBg('peakyblindersbg.png', 'peaky');">
+                <img src="peakyblindercard.png" alt="">
+            </div>
+            <div class="carousel-item" onclick="changeBg('squidgamebg.png', 'squid');">
+                <img src="squidgamecard.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <a href="#" class="play" onClick="toggleVideo();">
+        <i class="fa-solid fa-play" aria-hidden="true"></i>
+        Watch Trailer
+    </a>
+
+    <ul class="sci">
+     <li><a href="https://www.linkedin.com/in/sahil-saeid-76407a325/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://x.com/SaeidSahil9064" target="_blank"><i class="fa-brands fa-x-twitter"></i></a></li>
+        <li><a href="https://www.instagram.com/sahil__64_/?hl=en" target=""><i class="fa-brands fa-instagram"></i></a></li>
+    </ul>
+</div>
+
+<div class="trailer">
+    <video src="Peaky Blinders Trailer (Season 1) - Luke Lewis Video Editing (720p, h264).mp4" muted controls="true" autoplay="true"></video>
+    <img class="close" src="cross.png" alt="" onClick="toggleVideo();"/>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+$(document).ready(function(){
+    $('.carousel').carousel();
+});
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+<!-- JAVASCRIPT -->
+<script>
+function toggleVideo() {
+    const trailer = document.querySelector('.trailer');
+    const video = document.querySelector('video');
+    video.pause();
+    trailer.classList.toggle('active');
+}
+
+function changeBg(bg, title) {
+    console.log('Changing to:', bg, title); 
+    
+    const banner = document.querySelector('.banner');
+    const contents = document.querySelectorAll('.content');
+    
+    // Change background
+    banner.style.background = `url("${bg}")`;
+    banner.style.backgroundSize = 'cover';
+    banner.style.backgroundPosition = 'center';
+    
+    // Switch content
+    contents.forEach(content => {
+        content.classList.remove('active');
+        if (content.classList.contains(title)) {
+            content.classList.add('active');
+            console.log('Activated:', title); 
+        }
+    });
+}
+</script>
+</body>
+</html>
