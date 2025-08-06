@@ -1,8 +1,3 @@
-i have to upload a readme file in github , explaining my thinking while creating projects , the projcts details are attached
-
-create a readme file for that and add my extra thinking also that is
-thought it would be very much hectic for me , but due the leverage of ai like perplexity pro , gemini pro , claude pro and chatgpt pro was helping like a personal teacher , and was amazed to see the work of claude especially , i think so simple frontend developers are definitely going to replaced
-i have to upload a readme file in github , explaining my thinking while creating projects , the projcts details are attached create a readme file for that and add my extra thinking also that is thought it would be very much hectic for me , but due the leverage of ai like perplexity pro , gemini pro , claude pro and chatgpt pro was helping like a personal teacher , and was amazed to see the work of claude especially , i think so simple frontend developers are definitely going to replaced
 Project Collection README
 Welcome to my project collection! This repository contains several projects that showcase my journey and learning process in web development, leveraging both traditional problem-solving and modern AI assistance. Below, I’ll share an overview of each project and some reflections on my experiences and thought process while building them.
 
