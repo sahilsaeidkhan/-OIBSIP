@@ -1,4 +1,5 @@
 Project Collection README
+
 Welcome to my project collection! This repository contains several projects that showcase my journey and learning process in web development, leveraging both traditional problem-solving and modern AI assistance. Below, I’ll share an overview of each project and some reflections on my experiences and thought process while building them.
 
 📂 Project List
